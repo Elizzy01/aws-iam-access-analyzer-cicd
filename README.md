@@ -12,19 +12,13 @@ CloudFormation for infrastructure deployment.
 
 ## Architecture
 
-The CI/CD workflow follows this structure:
+The CI/CD pipeline consists of three major stages:
 
-GitHub
-  ↓
-AWS CodePipeline
-  ↓
-AWS CodeBuild
-  ├── CloudFormation Lint
-  └── IAM Policy Validation
-          ↓
-   IAM Access Analyzer
-  ↓
-CloudFormation Deployment
+1. **Source** — GitHub stores the CloudFormation template and supporting configuration.
+2. **Validation & Analysis** — AWS CodeBuild runs CloudFormation linting and IAM policy validation using AWS IAM Access Analyzer.
+3. **Deployment** — AWS CloudFormation deploys the template after the validation checks pass.
+
+![AWS IAM Access Analyzer CI/CD Architecture](docs/screenshots/01-workshop-architecture.png)
 
 ## Objectives
 
