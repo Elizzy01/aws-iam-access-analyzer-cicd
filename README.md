@@ -87,10 +87,6 @@ This project demonstrates a security-focused CI/CD workflow where CloudFormation
 
 ---
 
-## Architecture
-
-![AWS IAM Access Analyzer CI/CD Architecture](docs/screenshots/01-workshop-architecture.png)
-
 The pipeline uses an S3 artifact bucket to pass source artifacts between CodePipeline stages.
 
 ### AWS Services Used
@@ -725,8 +721,4 @@ aws iam list-role-policies \
 
 ---
 
-# 📚 Key Lessons Learned
 
-## CI/CD
-
-* How AWS CodePipeline
